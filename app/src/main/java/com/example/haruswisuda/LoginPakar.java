@@ -1,0 +1,152 @@
+package com.example.haruswisuda;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.haruswisuda.admin.Admin;
+
+public class LoginPakar extends AppCompatActivity {
+    EditText e1,e2,e3,e4,e5,e6;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login_pakar);
+        e1 = findViewById(R.id.pass1);
+        e2 = findViewById(R.id.pass2);
+        e3 = findViewById(R.id.pass3);
+        e4 = findViewById(R.id.pass4);
+        e5 = findViewById(R.id.pass5);
+        e6 = findViewById(R.id.pass6);
+
+        e1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(e1.getText().length() == 1) {
+                    e1.clearFocus();
+                    e2.requestFocus();
+                    e2.setText("");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        e2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(e2.getText().length() == 1) {
+                    e2.clearFocus();
+                    e3.requestFocus();
+                    e3.setText("");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        e3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(e3.getText().length() == 1) {
+                    e3.clearFocus();
+                    e4.requestFocus();
+                    e4.setText("");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        e4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(e4.getText().length() == 1) {
+                    e4.clearFocus();
+                    e5.requestFocus();
+                    e5.setText("");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        e5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(e5.getText().length() == 1) {
+                    e5.clearFocus();
+                    e6.requestFocus();
+                    e6.setText("");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        e6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(e6.getText().length() == 1) {
+                    checkCoode(e1,e2,e3,e4,e5,e6);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+    }
+    public void checkCoode(EditText e1,EditText e2,EditText e3,EditText e4,EditText e5,EditText e6){
+        String kode ="123321";
+        String user =e1.getText().toString()+""+e2.getText().toString()+""+e3.getText().toString()+""+e4.getText().toString()+""+e5.getText().toString()+""+e6.getText().toString();
+        if (user==kode){
+            startActivity(new Intent(LoginPakar.this, Admin.class));
+        }
+    }
+}

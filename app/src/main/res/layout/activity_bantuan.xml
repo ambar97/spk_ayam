@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".bantuan">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/bangkuk" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="30dp"
+        android:textSize="12.5dp"
+        android:text="Aplikasi ini merupakan aplikasi Sistem Pakar untuk mendiagnosa penyakit pada ayam bangkok yang berbasis Android. Pembuatan Apikasi ini bertujuan untuk membantu para peternak ayam bangkok yang awam terhadap penyakit-penyakit yang sering menyerang ayam bangkok."/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="fill_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="12.5dp"
+        android:text="Sistem ini merupakan sebuah perangkat lunak yang digunakan untuk memecahkan masalah yang biasanya diselesaikan oleh para pakar. Cara kerja dari aplikasi ini adalah peternah terlebih dahulu mengetahui jenis penyakit apa yang di derita oleh ayam bangkoknya, setelah itu apakah benar keyakinan peternak tentang penyakit ayam bangkok tersebut, lalu ditampilkan gejala-gejala awal yang di alami oleh ayam bangkok yang akan diproses menggunakan metode Teorema Bayes. Hasil akhirnya berupa presentasi dugaan penyakit yang diderita ayam bangkok. "/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="15dp"
+        android:textSize="12.5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Dalam Aplikasi ini juga memiliki solusi atau cara penanggulangan pertama pada ayam bangkok yang terkena penyakit, sehingga mempermudah peternak dalam penanganan penyakit ayam bangkok. Namun untuk penggunaan Aplikasi ini disarankan, apabila selama 3 hari penyakit tidak kunjung sembuh atau pulih segera untuk menghubungi dokter hewan." />
+
+</LinearLayout>
