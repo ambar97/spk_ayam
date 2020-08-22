@@ -35,7 +35,7 @@ public class Gejala extends AppCompatActivity {
     AdapterSpinnerPenyakit adapter;
     API api = new API();
     String url;
-    RecyclerView recyclerView
+    RecyclerView recyclerView;
     List<ModelSPinner> list  = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,13 +17,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Gejala extends AppCompatActivity {
 
@@ -60,7 +63,9 @@ public class Gejala extends AppCompatActivity {
                 Boolean gas = Boolean.FALSE;
                 for (int i=0; i<integerList.size(); i++) {
                     if (integerList.get(i).equals("-2")) {
-                        Toast.makeText(Gejala.this, "Harap isi Gejala", Toast.LENGTH_LONG).show();
+                        Snackbar snackbar = Snackbar
+                                .make(view, "Harap Pilih Kepastian Gejala", Snackbar.LENGTH_LONG);
+                        snackbar.show();
                         break;
                     }
                     gas = (i == integerList.size()-1 ) ? Boolean.TRUE : Boolean.FALSE;
@@ -129,7 +134,25 @@ public class Gejala extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Log.d("TAG", "onErrorResponse: "+error);
             }
-        });
+        }){
+            @Override
+            protected Map<String, String> getParams()
+            {
+                JSONObject jsonGejala = new JSONObject();
+                try {
+                    for (int i = 0; i < 8; i++) {
+                        jsonGejala.put("data" + i,6);
+                    }
+                } catch (JSONException e) {
+                }
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("name", "Alif");
+                params.put("domain", "http://itsalif.info");
+
+                return params;
+            }
+        };
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(penyakit);
     }

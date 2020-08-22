@@ -61,7 +61,7 @@ public class AdapterGejala extends RecyclerView.Adapter<AdapterGejala.ViewHolder
                     break;
             }
             Gejala.integerList.set(position, holder.cfu.getText().toString());
-            Log.d("TAG", "onCheckedChanged: "+Gejala.integerList.get(position));
+            Log.d("TAG", "onCheckedChanged: "+Gejala.integerList.get(position)+" id"+gejalas.get(position).getId_gejala());
         }
     });
     }

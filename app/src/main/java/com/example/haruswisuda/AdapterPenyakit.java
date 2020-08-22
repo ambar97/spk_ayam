@@ -37,8 +37,11 @@ public class AdapterPenyakit extends RecyclerView.Adapter<AdapterPenyakit.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context,ListdataActivity.class).putExtra("nama",listpenyakit.get(position).getNama_penyakit())
-                .putExtra("image",Gambarpenyakit[position]).putExtra("des",listpenyakit.get(position).getDeskripsi()));
+                Intent intent = new Intent(context,ListdataActivity.class);
+                intent.putExtra("nama",listpenyakit.get(position).getNama_penyakit());
+                intent.putExtra("image",Gambarpenyakit[position]);
+                intent.putExtra("des",listpenyakit.get(position).getDeskripsi());
+                context.startActivity(intent);
             }
         });
     }

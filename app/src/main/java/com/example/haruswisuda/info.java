@@ -51,7 +51,7 @@ public class info extends AppCompatActivity {
                         ModelPenyakit modelPenyakit = new ModelPenyakit(jsonObject1.getString("id_penyakit"), jsonObject1.getString("nama_penyakit"), jsonObject1.getString("deskripsi"));
                         list.add(modelPenyakit);
                     }
-                    adapterPenyakit = new AdapterPenyakit(list, getApplicationContext());
+                    adapterPenyakit = new AdapterPenyakit(list, info.this);
                     recyclerView.setAdapter(adapterPenyakit);
                     adapterPenyakit.notifyDataSetChanged();
                 } catch (JSONException e) {
