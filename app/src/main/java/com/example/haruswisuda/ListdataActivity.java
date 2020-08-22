@@ -1,6 +1,5 @@
 package com.example.haruswisuda;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -13,22 +12,19 @@ public class ListdataActivity extends AppCompatActivity {
     TextView listdata;
     ImageView imageView;
     TextView keterangan;
+    Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listdata);
-
+        bundle=getIntent().getExtras();
+        int res = getResources().getIdentifier(bundle.getString("img"), "drawable", this.getPackageName());
         listdata = findViewById(R.id.listdata);
         imageView = findViewById(R.id.imageView);
         keterangan = findViewById(R.id.keterangan);
-        Intent intent = getIntent();
-        String receivedName =  intent.getStringExtra("nama");
-        int receivedImage = intent.getIntExtra("image",0);
-        String receivedKet =  intent.getStringExtra("des");
-
-        listdata.setText(receivedName);
-        imageView.setImageResource(receivedImage);
-        keterangan.setText(receivedKet);
+        imageView.setImageResource(res);
+        listdata.setText(bundle.getString("nama")+" ("+bundle.getString("hasil")+"%)");
+        keterangan.setText(bundle.getString("des"));
         //enable back Button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -44,6 +40,7 @@ public class ListdataActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+
         super.onBackPressed();
     }
 }

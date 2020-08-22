@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -145,8 +147,20 @@ public class LoginPakar extends AppCompatActivity {
     public void checkCoode(EditText e1,EditText e2,EditText e3,EditText e4,EditText e5,EditText e6){
         String kode ="123321";
         String user =e1.getText().toString()+""+e2.getText().toString()+""+e3.getText().toString()+""+e4.getText().toString()+""+e5.getText().toString()+""+e6.getText().toString();
-        if (user==kode){
+        if (user.equals(kode)){
             startActivity(new Intent(LoginPakar.this, Admin.class));
         }
+        else {
+            e1.requestFocus();
+            e1.setFocusable(true);
+            e1.setText("");
+            e2.setText("");
+            e3.setText("");
+            e4.setText("");
+            e5.setText("");
+            e6.setText("");
+            Toast.makeText(this, "Kode Salah, Hubungi Owner", Toast.LENGTH_SHORT).show();
+        }
+        Log.d("TAG", "checkCoode: "+user);
     }
 }

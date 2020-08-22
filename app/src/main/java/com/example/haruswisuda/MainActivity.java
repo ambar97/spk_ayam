@@ -1,22 +1,38 @@
 package com.example.haruswisuda;
 
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
+    int clickcount=10;
+    TextView name;
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getActionBar();
+        this.getSupportActionBar().setDisplayOptions(actionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.actionbar);
+        View view = getSupportActionBar().getCustomView();
+        name = view.findViewById(R.id.actionbarTitle);
+        name.setTypeface(Typeface.DEFAULT);
+
 
         ImageView info = (ImageView) findViewById(R.id.tentang);
 
@@ -81,15 +97,32 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.menu_login, menu);
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickcount=clickcount-1;
+                if(clickcount<=5)
+                {
+                    Toast.makeText(getApplicationContext(),"Klik "+clickcount+"x lagi untuk masuk ke Login Pakar", Toast.LENGTH_SHORT).show();
+                }
+                if (clickcount==0)
+                {
+                    name.setClickable(false);
+                    MenuItem item = menu.findItem(R.id.login);
+                    item.setVisible(true);
+                }
+            }
+        });
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.login) {
+        int idLogin;
+        idLogin = item.getItemId();
+        if (idLogin == R.id.login) {
             startActivity(new Intent(MainActivity.this,LoginPakar.class));
             return true;
         }
