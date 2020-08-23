@@ -22,19 +22,21 @@ public class Admin extends AppCompatActivity {
         tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Admin.this,Gejala.class).putExtra("req","tambah"));
+                startActivity(new Intent(Admin.this, GejalaAdmin.class).putExtra("req","tambah"));
             }
         });
+
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Admin.this,Gejala.class).putExtra("req","edit"));
+                startActivity(new Intent(Admin.this, GejalaAdmin.class).putExtra("req","edit"));
             }
         });
+
         hapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Admin.this,Gejala.class).putExtra("req","hapus"));
+                startActivity(new Intent(Admin.this, GejalaAdmin.class).putExtra("req","hapus"));
             }
         });
     }

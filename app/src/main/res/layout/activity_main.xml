@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             >
             <TextView
@@ -48,7 +48,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="35dp"
                         android:src="@drawable/diagnosa"
-                        android:tint="@color/btn"
+                        app:tint="@color/btn"
                         tools:ignore="OnClick"/>
 
                     <TextView
@@ -93,7 +93,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="35dp"
                         android:src="@drawable/info"
-                        android:tint="@color/btn"
+                        app:tint="@color/btn"
                         tools:ignore="OnClick" />
 
                     <TextView
@@ -128,7 +128,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="35dp"
                         android:src="@drawable/bantuan"
-                        android:tint="@color/btn"
+                        app:tint="@color/btn"
                         tools:ignore="OnClick" />
 
                     <TextView
@@ -172,7 +172,7 @@
                         android:layout_marginTop="35dp"
                         android:layout_gravity="center"
                         android:src="@drawable/tentang"
-                        android:tint="@color/btn"
+                        app:tint="@color/btn"
                         tools:ignore="OnClick" />
                     <TextView
                         android:layout_width="match_parent"
@@ -204,7 +204,7 @@
                         android:layout_gravity="center"
                         android:onClick="exitclikkk"
                         android:src="@drawable/keluar"
-                        android:tint="@color/btn"
+                        app:tint="@color/btn"
                         />
                     <TextView
                         android:layout_width="match_parent"

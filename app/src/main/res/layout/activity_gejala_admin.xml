@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".admin.Gejala">
+    tools:context=".admin.GejalaAdmin">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -23,20 +23,28 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinnerPenyakit"
         android:layout_marginTop="30dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"/>
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerGejala"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittextview"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
     <Button
         android:id="@+id/btnAction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginRight="70dp"
         android:layout_marginLeft="70dp"/>
 </LinearLayout>

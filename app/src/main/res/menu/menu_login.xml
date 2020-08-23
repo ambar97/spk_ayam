@@ -6,6 +6,7 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/login"
+        android:visible="false"
         android:orderInCategory="100"
         android:title="Login"
         app:showAsAction="always" />

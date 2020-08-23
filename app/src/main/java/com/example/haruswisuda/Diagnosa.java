@@ -17,10 +17,11 @@ public class Diagnosa extends AppCompatActivity {
 
     EditText edittextview;
     Button btnAnalisa;
-    String kalimat;
+    String kalimat, img;
     TextView id_penyakit;
 
     String [] namaPenyakit ={"Penyakit Snot (Coryza)","Penyakit Ngorok (CDR)","Penyakit Infectious Laryngotracheitis (ILT)","Penyakit Berak Kapur (Pullorum)","Penyakit Gumoro","Penyakit Tetelo"};
+    String [] imgs ={"snot","ngorokkk","ilt","berakkapur","gumboro","tetelo"};
 
 
     @Override
@@ -47,6 +48,7 @@ public class Diagnosa extends AppCompatActivity {
                         int id = i+1;
                         edittextview.setText(namaPenyakit[i].toString());
                         id_penyakit.setText(""+id);
+                        img=imgs[i];
                         dialogInterface.dismiss();
                     }
                 }).create().show();
@@ -64,6 +66,7 @@ public class Diagnosa extends AppCompatActivity {
                     Intent intent = new Intent(Diagnosa.this, Gejala.class);
                     intent.putExtra("nama", kalimat);
                     intent.putExtra("id", id_penyakit.getText());
+                    intent.putExtra("img",img);
                     startActivity(intent);
                 }
             }
