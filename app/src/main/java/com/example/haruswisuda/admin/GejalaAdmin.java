@@ -31,7 +31,7 @@ public class GejalaAdmin extends AppCompatActivity {
     Bundle bundle;
     TextView textView;
     Button btnAct;
-    EditText editText;
+    EditText editText, nilai;
     Spinner penyakit, gejala;
     API api = new API();
     String url;
@@ -49,6 +49,7 @@ public class GejalaAdmin extends AppCompatActivity {
         btnAct = findViewById(R.id.btnAction);
         editText=findViewById(R.id.edittextview);
         url = api.getApi_service();
+        nilai = findViewById(R.id.nilaipakaradmin);
         penyakit = findViewById(R.id.spinnerPenyakit);
         gejala = findViewById(R.id.spinnerGejala);
 
@@ -58,23 +59,15 @@ public class GejalaAdmin extends AppCompatActivity {
             gejala.setVisibility(View.GONE);
             editText.setVisibility(View.VISIBLE);
             editText.setHint("Masukan Gejala Baru");
+            nilai.setVisibility(View.VISIBLE);
+            nilai.setHint("Masukan nilai pakar");
             btnAct.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     tambahGejala();
                 }
             });
-        }else if (bundle.getString("req").equals("edit")){
-            textView.setText("Edit Gejala");
-            btnAct.setText("Edit Gejala");
-            editText.setVisibility(View.VISIBLE);
-            editText.setHint("Ubah Gejala");
-            btnAct.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    editGejala();
-                }
-            });
+
         } else if (bundle.getString("req").equals("hapus")) {
             textView.setText("Hapus Gejala");
             btnAct.setText("Hapus Gejala");
@@ -124,9 +117,6 @@ public class GejalaAdmin extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
     public void tambahGejala(){
-
-    }
-    public void editGejala(){
 
     }
     public void hapusGejala(){

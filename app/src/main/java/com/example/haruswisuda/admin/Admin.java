@@ -10,26 +10,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.haruswisuda.R;
 
 public class Admin extends AppCompatActivity {
-    Button tambah, edit, hapus;
+    Button tambah, hapus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
         tambah = findViewById(R.id.btntambah);
-        edit = findViewById(R.id.btnedit);
         hapus = findViewById(R.id.btnhapus);
 
         tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Admin.this, GejalaAdmin.class).putExtra("req","tambah"));
-            }
-        });
-
-        edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Admin.this, GejalaAdmin.class).putExtra("req","edit"));
             }
         });
 

@@ -35,7 +35,15 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edittextview"
+        android:id="@+id/gejalaadmin"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nilaipakaradmin"
         android:layout_marginTop="20dp"
         android:visibility="gone"
         android:layout_marginRight="40dp"
