@@ -27,14 +27,14 @@
         android:layout_marginRight="70dp"
         android:layout_marginLeft="70dp"
         android:text="Tambah Gejala"/>
-    <Button
-        android:id="@+id/btnedit"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:text="Edit Gejala"/>
+<!--    <Button-->
+<!--        android:id="@+id/btnedit"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="70dp"-->
+<!--        android:layout_marginLeft="70dp"-->
+<!--        android:text="Edit Gejala"/>-->
     <Button
         android:id="@+id/btnhapus"
         android:layout_marginTop="20dp"
