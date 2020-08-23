@@ -149,6 +149,7 @@ public class LoginPakar extends AppCompatActivity {
         String user =e1.getText().toString()+""+e2.getText().toString()+""+e3.getText().toString()+""+e4.getText().toString()+""+e5.getText().toString()+""+e6.getText().toString();
         if (user.equals(kode)){
             startActivity(new Intent(LoginPakar.this, Admin.class));
+            finish();
         }
         else {
             e1.requestFocus();
