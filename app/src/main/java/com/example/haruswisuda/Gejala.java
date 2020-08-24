@@ -53,7 +53,7 @@ public class Gejala extends AppCompatActivity {
 
         dialog=new ProgressDialog(this);
         dialog.setIndeterminate(false);
-        dialog.setCancelable(true);
+        dialog.setCancelable(false);
         dialog.setMessage("Memproses ...");
 
         integerList = new ArrayList<>();

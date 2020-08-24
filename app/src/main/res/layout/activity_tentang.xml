@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     android:orientation="vertical"
     tools:context=".tentang">
 
@@ -16,42 +17,47 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
+        android:padding="20sp"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
         android:text="Aplikasi ini dibuat sebagai persyaratan untuk memperoleh gelar AMd di Jurusan Teknologi Informasi Program Studi Manajemen Informatika Politeknik Negeri Jember"/>
 
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_marginTop="20dp"
-        android:text="Nama Aplikasi : RoosterID"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:padding="5dp"
-        android:text="Judul Tugas Akhir :\nSistem Pakar Mendiagnosa Penyakit Pada Ayam Bangkok Berbais Android"
-        tools:ignore="RtlCompat" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="Nama : David Helmi Bahari \nNIM     : E31171281"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="Pembimbing : Hendra Yufit Riskiawan, S.Kom, M.Cs"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="Pakar : Para peternak/penghobi ayam Bangkok desa Tegalsari Kec. Tegalsari Kab. Banyuwangi"/>
-
-
-
-
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Nama Aplikasi : RoosterID"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:text="Judul Tugas Akhir :\nSistem Pakar Mendiagnosa Penyakit Pada Ayam Bangkok Berbais Android"
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Nama : David Helmi Bahari \nNIM     : E31171281"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Pembimbing : Hendra Yufit Riskiawan, S.Kom, M.Cs"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Pakar : Para peternak/penghobi ayam Bangkok desa Tegalsari Kec. Tegalsari Kab. Banyuwangi"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

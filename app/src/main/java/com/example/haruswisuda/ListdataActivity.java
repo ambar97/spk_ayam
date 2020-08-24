@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ListdataActivity extends AppCompatActivity {
-
     TextView listdata;
     ImageView imageView;
     TextView keterangan;

@@ -1,7 +1,15 @@
 package com.example.haruswisuda;
 
-public class ModelPenyakit {
+public class ModelInfo {
     String id, nama_penyakit, deskripsi;
+    String img;
+
+    public ModelInfo(String id, String nama_penyakit, String deskripsi, String img) {
+        this.id = id;
+        this.nama_penyakit = nama_penyakit;
+        this.deskripsi = deskripsi;
+        this.img = img;
+    }
 
     public String getId() {
         return id;
@@ -27,10 +35,11 @@ public class ModelPenyakit {
         this.deskripsi = deskripsi;
     }
 
-    public ModelPenyakit(String id, String nama_penyakit, String deskripsi) {
-        this.id = id;
-        this.nama_penyakit = nama_penyakit;
-        this.deskripsi = deskripsi;
+    public String getImg() {
+        return img;
     }
 
+    public void setImg(String img) {
+        this.img = img;
+    }
 }
